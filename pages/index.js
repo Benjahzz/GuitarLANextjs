@@ -16,7 +16,7 @@ export default function Home({ guitarras, posts ,curso}) {
           <h1 className="heading">Nuestra Colección</h1>
           <div className={styles.grid}>
             {guitarras?.map((guitarra) => (
-              <Guitarra guitarra={guitarra} />
+              <Guitarra guitarra={guitarra} key={guitarra.id} />
             ))}
           </div>
         </main>

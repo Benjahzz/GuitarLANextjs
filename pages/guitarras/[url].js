@@ -24,7 +24,7 @@ const Producto = ({ guitarra, agregarCarrito}) => {
   return (
     <Layout title={`Guitarra ${nombre}`}>
       <div className={styles.guitarra}>
-        <Image src={imagen.data.attributes.url} width={600} height={400} />
+        <Image src={imagen.data.attributes.url} width={600} height={400} alt={`Imagen guitarra ${nombre}`}/>
         <div className={styles.contenido}>
           <h3>{nombre}</h3>
           <p className={styles.descripcion}>{descripcion}</p>
