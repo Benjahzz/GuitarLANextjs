@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Carrito = ({ carrito,actualizarCantidad,eliminarProducto }) => {
   const [total,setTotal] = useState(0)
   useEffect(()=>{
-    const calculoTotal = carrito.reduce((total,producto)=> total + (producto.cantidad * producto.precio) , 0)
+    const calculoTotal = carrito?.reduce((total,producto)=> total + (producto.cantidad * producto.precio) , 0)
     setTotal(calculoTotal)
   },[carrito])
   return (
