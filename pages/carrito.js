@@ -17,7 +17,7 @@ const Carrito = ({ carrito,actualizarCantidad,eliminarProducto }) => {
             <h2>Articulos</h2>
             {carrito?.length === 0
               ? "Carrito vacio"
-              : carrito.map((producto) => (
+              : carrito?.map((producto) => (
                   <div key={producto.id} className={styles.producto}>
                     <div>
                       <Image

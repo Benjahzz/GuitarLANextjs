@@ -14,7 +14,7 @@ const Producto = ({ guitarra, agregarCarrito}) => {
     const guitarraSeleccionada = {
       id:guitarra[0].id,
       cantidad,
-      imagen: imagen.data.attributes.url,
+      imagen: imagen?.data?.attributes.url,
       precio,
       nombre
 
@@ -24,7 +24,7 @@ const Producto = ({ guitarra, agregarCarrito}) => {
   return (
     <Layout title={`Guitarra ${nombre}`}>
       <div className={styles.guitarra}>
-        <Image src={imagen.data.attributes.url} width={600} height={400} alt={`Imagen guitarra ${nombre}`}/>
+        <Image src={imagen?.data?.attributes?.url} width={600} height={400} alt={`Imagen guitarra ${nombre}`}/>
         <div className={styles.contenido}>
           <h3>{nombre}</h3>
           <p className={styles.descripcion}>{descripcion}</p>

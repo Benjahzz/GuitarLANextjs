@@ -8,7 +8,7 @@ const Tienda = ({ guitarras }) => {
         <h1 className="heading">Nuestra colección</h1>
         <div className={styles.grid}>
           {guitarras?.length > 0 &&
-            guitarras.map((guitarra) => (
+            guitarras?.map((guitarra) => (
               <Guitarra guitarra={guitarra} key={guitarra.id} />
             ))}
         </div>
